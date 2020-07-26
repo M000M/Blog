@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: s002611
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true #将SQL语句输出到控制台或日志中
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+logging:
+  level:
+    root: info
+    cn.edu.pku.blog: info #日志级别
+  #日志文件，默认在根目录下
+  file:
+    path: log/blog-dev.log #默认是10M,超过会自动分割
+
+server:
+  port: 8087
+
+
+
+
+
+
+
+
+
+
+
+

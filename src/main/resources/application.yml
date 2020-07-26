@@ -1,0 +1,31 @@
+spring:
+  thymeleaf:
+    mode: HTML
+
+    #设置环境
+  profiles:
+    active: dev #后缀匹配就行了
+
+  #设置热部署
+  devtools:
+    restart:
+      enable: true #设置开启热部署
+      additional-paths: src/main/java #重启目录
+      exclude: WEB-INF/**
+  freemarker:
+    cache: false  #页面不加载缓存，修改即时生效
+
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+
+server:
+  tomcat:
+    uri-encoding: UTF-8
+
+#  mvc:
+#    static-path-pattern: /static/**
+
+comment.avatar: /images/avatar.png
